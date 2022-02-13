@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.63b2e82c.css","mappings":"AAAA,aACE,cAAe,CACf,iBACF,CAEA,eACE,aACF","sources":["components/Footer/Footer.css"],"sourcesContent":[".attribution {\n  font-size: 11px;\n  text-align: center;\n}\n\n.attribution a {\n  color: hsl(228, 45%, 44%);\n}\n"],"names":[],"sourceRoot":""}
