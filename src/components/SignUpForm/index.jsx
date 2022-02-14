@@ -1,15 +1,53 @@
 import React from 'react';
 
+import styles from './SignUpForm.module.css';
+
 const SignUpForm = () => (
-  <form>
-    First Name
-    Last Name
-    Email Address
-    Password
-
-    Claim your free trial
-
-    By clicking the button, you are agreeing to our Terms and Services
+  <form className={styles.signUpForm}>
+    <div className={styles.input}>
+      <input
+        autoComplete="off"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
+        type="text"
+      />
+    </div>
+    <div className={styles.input}>
+      <input
+        autoComplete="off"
+        id="lastName"
+        name="lastName"
+        placeholder="Last Name"
+        type="text"
+      />
+    </div>
+    <div className={styles.input}>
+      <input
+        autoComplete="off"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        type="text"
+      />
+    </div>
+    <div className={styles.input}>
+      <input
+        autoComplete="off"
+        id="password"
+        name="password"
+        placeholder="Password"
+        type="password"
+      />
+    </div>
+    <div>
+      <button type="submit">
+        Claim your free trial
+      </button>
+      <p>
+        By clicking the button, you are agreeing to our Terms and Services
+      </p>
+    </div>
   </form>
 );
 
