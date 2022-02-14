@@ -1,19 +1,29 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+
 import './Footer.css';
 
-const Footer = () => (
+const Footer = ({ style }) => (
   <footer>
     <p className="attribution">
       Challenge by
       {' '}
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
+      <a style={style} href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
       .
       Coded by
       {' '}
-      <a href="https://www.abizmo.dev">Abián Izquierdo</a>
+      <a style={style} href="https://www.abizmo.dev">Abián Izquierdo</a>
       .
     </p>
   </footer>
 );
+
+Footer.propTypes = {
+  style: PropTypes.shape(),
+};
+
+Footer.defaultProps = {
+  style: null,
+};
 
 export default Footer;
