@@ -1,19 +1,29 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+
 import './Footer.css';
 
-const Footer = () => (
+const Footer = ({ accentColor }) => (
   <footer>
     <p className="attribution">
       Challenge by
       {' '}
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
+      <a style={{ color: accentColor }} href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>
       .
       Coded by
       {' '}
-      <a href="https://www.abizmo.dev">Abián Izquierdo</a>
+      <a style={{ color: accentColor }} href="https://www.abizmo.dev">Abián Izquierdo</a>
       .
     </p>
   </footer>
 );
+
+Footer.propTypes = {
+  accentColor: PropTypes.shape(),
+};
+
+Footer.defaultProps = {
+  accentColor: null,
+};
 
 export default Footer;
