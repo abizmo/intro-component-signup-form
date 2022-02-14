@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/intro-component-signup-form/static/css/main.b820a6b7.css",
-    "main.js": "/intro-component-signup-form/static/js/main.6fbb9c5e.js",
+    "main.css": "/intro-component-signup-form/static/css/main.f995bef5.css",
+    "main.js": "/intro-component-signup-form/static/js/main.249e866f.js",
     "static/media/bg-intro-mobile.png": "/intro-component-signup-form/static/media/bg-intro-mobile.02ce398270ece1769ebc.png",
     "index.html": "/intro-component-signup-form/index.html",
-    "main.b820a6b7.css.map": "/intro-component-signup-form/static/css/main.b820a6b7.css.map",
-    "main.6fbb9c5e.js.map": "/intro-component-signup-form/static/js/main.6fbb9c5e.js.map"
+    "main.f995bef5.css.map": "/intro-component-signup-form/static/css/main.f995bef5.css.map",
+    "main.249e866f.js.map": "/intro-component-signup-form/static/js/main.249e866f.js.map"
   },
   "entrypoints": [
-    "static/css/main.b820a6b7.css",
-    "static/js/main.6fbb9c5e.js"
+    "static/css/main.f995bef5.css",
+    "static/js/main.249e866f.js"
   ]
 }
