@@ -6,7 +6,7 @@ import Intro from './components/Intro';
 const App = () => (
   <>
     <Intro />
-    <Footer style={{ color: 'white' }} />
+    <Footer accentColor="white" />
   </>
 );
 
