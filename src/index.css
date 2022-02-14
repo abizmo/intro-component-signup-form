@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: ;
+  --accent-blue: ;
+  --neutral-dark-blue: ;
+  --neutral-grayish-blue: ;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  padding: 0;
+  width: 100vw;
+}
+
+body {
+  background: url('/public/images/bg-intro-mobile.png') center/contain, var(--primary-red);
+  background-size: contain;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 327px;
+  padding: 16px 0;
+}
