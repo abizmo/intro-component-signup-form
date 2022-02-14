@@ -1,0 +1,9 @@
+.banner {
+  background: var(--accent-blue);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 4px 0px;
+  color: var(--neutral-white);
+  line-height: 26px;
+  padding: 16px 72px;
+  text-align: center;
+}
