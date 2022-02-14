@@ -2,16 +2,23 @@
 import React from 'react';
 import Footer from './components/Footer';
 
-function App() {
-  return (
-    <>
+const App = () => (
+  <>
+    <h1>
       Learn to code by watching others
-
+    </h1>
+    <h2>
       See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
       but understanding how developers think is invaluable.
-
-      Try it free 7 days then $20/mo. thereafter
-
+    </h2>
+    <div>
+      <p>
+        <b>Try it free 7 days</b>
+        {' '}
+        then $20/mo. thereafter
+      </p>
+    </div>
+    <form>
       First Name
       Last Name
       Email Address
@@ -20,10 +27,10 @@ function App() {
       Claim your free trial
 
       By clicking the button, you are agreeing to our Terms and Services
+    </form>
 
-      <Footer />
-    </>
-  );
-}
+    <Footer />
+  </>
+);
 
 export default App;
