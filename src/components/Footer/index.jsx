@@ -19,7 +19,7 @@ const Footer = ({ accentColor }) => (
 );
 
 Footer.propTypes = {
-  accentColor: PropTypes.shape(),
+  accentColor: PropTypes.string,
 };
 
 Footer.defaultProps = {
