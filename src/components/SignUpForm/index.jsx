@@ -22,14 +22,19 @@ const SignUpForm = () => (
         type="text"
       />
     </div>
-    <div className={styles.input}>
-      <input
-        autoComplete="off"
-        id="email"
-        name="email"
-        placeholder="Email Address"
-        type="text"
-      />
+    <div>
+      <div className={`${styles.input} ${styles.error}`}>
+        <input
+          autoComplete="off"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+          type="text"
+          value="email@example/com"
+        />
+        <i className="fa-solid fa-circle-exclamation" />
+      </div>
+      <em className={styles.message}>Looks like this is not an email</em>
     </div>
     <div className={styles.input}>
       <input

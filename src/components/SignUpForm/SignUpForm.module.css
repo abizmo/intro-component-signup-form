@@ -9,11 +9,16 @@
   padding: 24px;
 }
 
+.signUpForm div {
+  width: 100%;
+}
+
 .input {
   border: 1px solid var(--neutral-grayish-blue);
   border-radius: 4px;
+  color: var(--neutral-dark-blue);
   padding: 16px 0;
-  width: 100%;
+  position: relative;
 }
 
 .input:focus-within {
@@ -22,16 +27,30 @@
 
 .input input {
   border: none;
-  color: var(--neutral-dark-blue);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02rem;
-  padding-left: 16px;
+  padding: 0 16px;
   width: 100%;
 }
 
 .input input:focus-visible {
   outline: none;
+}
+
+.input i {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.message {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 8px;
+  text-align: right;
 }
 
 .action {
@@ -78,10 +97,23 @@
   }
 
   .input input {
-    padding-left: 32px;
+    padding: 0 32px;
+  }
+
+  .input i {
+    right: 32px;
   }
 
   .action p {
     max-width: 100%;
   }
+}
+
+.error {
+  border-color: var(--primary-red);
+  border-width: 2px;
+}
+
+.error input, i, em {
+  color: var(--primary-red);
 }
