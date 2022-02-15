@@ -16,6 +16,10 @@
   width: 100%;
 }
 
+.input:focus-within {
+  border-color: var(--accent-blue);
+}
+
 .input input {
   border: none;
   color: var(--neutral-dark-blue);
@@ -49,6 +53,11 @@
   padding: 16px 0;
   text-transform: uppercase;
   width: 100%;
+}
+
+.action button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
 }
 
 .action p {
