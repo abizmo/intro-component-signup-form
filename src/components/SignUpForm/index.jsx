@@ -40,12 +40,14 @@ const SignUpForm = () => (
         type="password"
       />
     </div>
-    <div>
+    <div className={styles.action}>
       <button type="submit">
         Claim your free trial
       </button>
       <p>
-        By clicking the button, you are agreeing to our Terms and Services
+        By clicking the button, you are agreeing to our
+        {' '}
+        <b>Terms and Services</b>
       </p>
     </div>
   </form>

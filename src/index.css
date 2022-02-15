@@ -21,7 +21,6 @@ html, body {
 
 body {
   background: url('/public/images/bg-intro-mobile.png') center/contain, var(--primary-red);
-  background-size: contain;
 }
 
 main {
@@ -31,5 +30,5 @@ main {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 327px;
-  padding: 16px 0;
+  padding: 96px 0 16px;
 }
