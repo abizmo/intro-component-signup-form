@@ -1,0 +1,64 @@
+.signUpForm {
+  align-items: center;
+  background-color: var(--neutral-white);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 4px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.input {
+  border: 1px solid var(--neutral-grayish-blue);
+  border-radius: 4px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.input input {
+  border: none;
+  color: var(--neutral-dark-blue);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.input input:focus-visible {
+  outline: none;
+}
+
+.action {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.action button {
+  background: var(--primary-green);
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--neutral-white);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 16px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.action p {
+  color: var(--neutral-grayish-blue);
+  font-size: 11px;
+  line-height: 21px;
+  max-width: 248px;
+  text-align: center;
+}
+
+.action b {
+  color: var(--primary-red);
+}

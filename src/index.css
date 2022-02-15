@@ -4,24 +4,23 @@
 }
 
 :root {
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-grayish-blue: hsl(246, 25%, 77%);
+  --neutral-white: hsl(249, 100%, 100%);
+  --primary-green: hsl(154, 59%, 51%);
   --primary-red: hsl(0, 100%, 74%);
-  --primary-green: ;
-  --accent-blue: ;
-  --neutral-dark-blue: ;
-  --neutral-grayish-blue: ;
 }
 
 html, body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  height: 100vh;
   padding: 0;
   width: 100vw;
 }
 
 body {
   background: url('/public/images/bg-intro-mobile.png') center/contain, var(--primary-red);
-  background-size: contain;
 }
 
 main {
@@ -31,5 +30,5 @@ main {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 327px;
-  padding: 16px 0;
+  padding: 96px 0 16px;
 }
