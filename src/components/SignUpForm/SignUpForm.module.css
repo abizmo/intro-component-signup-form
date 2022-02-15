@@ -62,3 +62,17 @@
 .action b {
   color: var(--primary-red);
 }
+
+@media (min-width: 1280px) {
+  .signUpForm {
+    padding: 40px;
+  }
+
+  .input input {
+    padding-left: 32px;
+  }
+
+  .action p {
+    max-width: 100%;
+  }
+}
