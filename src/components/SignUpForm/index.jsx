@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 import styles from './SignUpForm.module.css';
 
 const errorMessages = {
   firstName: 'Fist Name can not be empty',
   lastName: 'Last Name can not be empty',
-  emailEmpty: 'Email can not be empty',
+  email: 'Email can not be empty',
   notEmail: 'Looks like this is not an email',
   password: 'Password can not be empty',
 };
@@ -25,7 +25,6 @@ const SignUpForm = () => {
     email: '',
     password: '',
   });
-  const [disabled, setDisabled] = useState(false);
 
   const {
     firstName, lastName, email, password,
@@ -37,47 +36,49 @@ const SignUpForm = () => {
     password: passwordError,
   } = errors;
 
-  const firstRender = useRef(true);
-  useEffect(() => {
-    if (firstRender.current) {
-      firstRender.current = false;
-      return;
-    }
-
-    setDisabled(Object.values(errors).some((input) => input !== ''));
-  }, [firstNameError, lastNameError, emailError, passwordError]);
-
   const isEmpty = (value) => value.trim() === '';
 
-  const validateInput = (name, value) => (isEmpty(value) ? errorMessages[name] : '');
-
-  const validateEmail = (emailToValidate) => {
+  const isEmail = (emailToValidate) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (isEmpty(emailToValidate)) return errorMessages.emailEmpty;
-    if (!emailToValidate.match(re)) return errorMessages.notEmail;
+
+    return emailToValidate.match(re);
+  };
+
+  const validateInput = (name, value) => {
+    if (isEmpty(value)) return errorMessages[name];
+    if (name === 'email' && !isEmail(value)) return errorMessages.notEmail;
+
     return '';
   };
 
   const handleChange = ({ name, value }) => {
-    setInputs((prvInputs) => {
-      setErrors({
-        ...errors,
-        [name]: (name === 'email' ? validateEmail(value) : validateInput(name, value)),
-      });
-
-      return {
-        ...prvInputs,
-        [name]: value,
-      };
+    setInputs({
+      ...inputs,
+      [name]: value,
     });
   };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    setInputs(initialInputs);
-    // eslint-disable-next-line no-console
-    console.log('Form submitted');
+    let isValid = true;
+
+    Object.entries(inputs).forEach(([name, value]) => {
+      const errorMessage = validateInput(name, value);
+
+      isValid = isValid && !errorMessage;
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: errorMessage,
+      }));
+    });
+
+    if (isValid) {
+      console.log(errors);
+      setInputs(initialInputs);
+      // eslint-disable-next-line no-console
+      console.log('Form submitted');
+    }
   };
 
   return (
@@ -167,7 +168,7 @@ const SignUpForm = () => {
         }
       </div>
       <div className={styles.action}>
-        <button disabled={disabled} type="submit">
+        <button type="submit">
           Claim your free trial
         </button>
         <p>
