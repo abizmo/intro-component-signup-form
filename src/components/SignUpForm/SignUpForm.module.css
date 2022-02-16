@@ -23,6 +23,7 @@
 
 .input:focus-within {
   border-color: var(--accent-blue);
+  border-width: 2px;
 }
 
 .input input {
