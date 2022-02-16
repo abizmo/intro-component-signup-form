@@ -74,7 +74,6 @@ const SignUpForm = () => {
     });
 
     if (isValid) {
-      console.log(errors);
       setInputs(initialInputs);
       // eslint-disable-next-line no-console
       console.log('Form submitted');
