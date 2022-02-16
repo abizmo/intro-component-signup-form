@@ -75,6 +75,11 @@
   width: 100%;
 }
 
+.action button:disabled {
+  cursor: not-allowed!important;
+  filter: grayscale(1)!important;
+}
+
 .action button:hover {
   cursor: pointer;
   filter: brightness(110%);

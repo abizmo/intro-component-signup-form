@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './SignUpForm.module.css';
 
@@ -25,6 +25,7 @@ const SignUpForm = () => {
     email: '',
     password: '',
   });
+  const [disabled, setDisabled] = useState(false);
 
   const {
     firstName, lastName, email, password,
@@ -35,6 +36,16 @@ const SignUpForm = () => {
     email: emailError,
     password: passwordError,
   } = errors;
+
+  const firstRender = useRef(true);
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+
+    setDisabled(Object.values(errors).some((input) => input !== ''));
+  }, [firstNameError, lastNameError, emailError, passwordError]);
 
   const isEmpty = (value) => value.trim() === '';
 
@@ -64,10 +75,9 @@ const SignUpForm = () => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
 
-    if (Object.values(errors).every((input) => input === '')) {
-      alert('Form submitted!');
-      setInputs(initialInputs);
-    }
+    setInputs(initialInputs);
+    // eslint-disable-next-line no-console
+    console.log('Form submitted');
   };
 
   return (
@@ -157,7 +167,7 @@ const SignUpForm = () => {
         }
       </div>
       <div className={styles.action}>
-        <button type="submit">
+        <button disabled={disabled} type="submit">
           Claim your free trial
         </button>
         <p>
