@@ -110,7 +110,7 @@
   }
 }
 
-.error {
+.error.input {
   border-color: var(--primary-red);
   border-width: 2px;
 }
