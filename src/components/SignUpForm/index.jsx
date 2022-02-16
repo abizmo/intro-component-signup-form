@@ -24,8 +24,12 @@ const SignUpForm = () => {
     });
   };
 
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+  };
+
   return (
-    <form className={styles.signUpForm}>
+    <form className={styles.signUpForm} onSubmit={handleSubmit}>
       <div className={styles.input}>
         <input
           autoComplete="off"
